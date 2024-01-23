@@ -58,7 +58,7 @@ jobs:
           gpg-passphrase: GPG_PASSPHRASE
 
       - name: Create Release
-        if: runner.os == 'Linux' # Create release only once
+        if: runner.os == 'ubuntu-latest' # Create release only once
         uses: actions/create-release@v1
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
