@@ -1,4 +1,4 @@
-cmake_minimum_required(VERSION 3.13)
+﻿cmake_minimum_required(VERSION 3.13)
 project(webrtc)
 
 FILE(WRITE ${CMAKE_CURRENT_BINARY_DIR}/pseudo.hxx
@@ -77,7 +77,7 @@ endfunction()
 function(sysroot_link)
 	message(STATUS "Retrieving libm.so from sysroot")
 	execute_process(
-		COMMAND find src/build/linux/debian_sid_amd64-sysroot -iname libm-*.so
+		COMMAND find src/build/linux/debian_bullseye_amd64-sysroot -iname libm-*.so
 		WORKING_DIRECTORY "${WEBRTC_SRC_DIR}"
 		OUTPUT_VARIABLE COMMAND_OUTPUT
 		ERROR_VARIABLE COMMAND_ERROR
